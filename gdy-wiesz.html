@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>gdy wiesz</title>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro-text {
+    color: red;
+    font-size: 60px;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+  }
+
+  .intro-text:hover {
+    color: white;
+    letter-spacing: 6px;
+  }
+
+  .content {
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+  }
+
+  #trigger {
+    display: none;
+  }
+
+  .room-img {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+  }
+
+  .click-zone {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+    top: 340px;
+    left: 285px;
+
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .circle {
+    position: absolute;
+    border: 3px solid rgb(49, 233, 49);
+    border-radius: 50%;
+    width: 80px;
+    height: 50px;
+
+    top: 340px;
+    left: 275px;
+
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  #trigger:checked ~ .circle {
+    opacity: 1;
+  }
+
+  .quiz {
+  width: 66%;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.question {
+  text-align: center;
+}
+
+.q-img {
+  width: 200px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.question input {
+  display: none;
+}
+
+.ans {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ans:hover {
+  background: white;
+  color: black;
+}
+
+input:checked + .correct {
+  background: green;
+  color: black;
+}
+
+input:checked + .wrong {
+  background: red;
+  color: black;
+}
+
+.ending {
+  margin-top: 300px; /* duży scroll */
+  text-align: center;
+}
+
+.ending-text {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.ending-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.wake-button {
+  border: 3px solid rgb(206, 151, 255);
+  padding: 20px 40px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.wake-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="intro">
+  <a href="#pytanie1" class="intro-text">test</a>
+</div>
+
+<div id="pytanie1" class="content">
+
+  <p>znajdź anomalie</p>
+
+  <div class="image-container">
+
+    <input type="checkbox" id="trigger">
+
+    <img src="pokoj.jpg" class="room-img" alt="pokój">
+
+    <label for="trigger" class="click-zone"></label>
+
+    <div class="circle"></div>
+
+  </div>
+
+<div class="quiz">
+
+  <div class="question">
+    <img src="1.jpg" class="q-img" alt="">
+
+    <p>Czy patrzysz bezpośrednio na postać w pokoju?</p>
+
+    <input type="radio" name="q1" id="q1tak">
+    <label for="q1tak" class="ans wrong">TAK</label>
+
+    <input type="radio" name="q1" id="q1nie">
+    <label for="q1nie" class="ans correct">NIE</label>
+  </div>
+
+  <div class="question">
+    <img src="2.jpg" class="q-img" alt="">
+
+    <p>Czy panikujesz i próbujesz "wyrwać się" siłą?</p>
+
+    <input type="radio" name="q2" id="q2tak">
+    <label for="q2tak" class="ans wrong">TAK</label>
+
+    <input type="radio" name="q2" id="q2nie">
+    <label for="q2nie" class="ans correct">NIE</label>
+  </div>
+
+  <div class="question">
+    <img src="3.jpg" class="q-img" alt="">
+
+    <p>Czy jak rozmawiasz z osobą we śnie, mówisz jej, że nie jest prawdziwa?</p>
+
+    <input type="radio" name="q3" id="q3tak">
+    <label for="q3tak" class="ans wrong">TAK</label>
+
+    <input type="radio" name="q3" id="q3nie">
+    <label for="q3nie" class="ans correct">NIE</label>
+  </div>
+
+  <div class="question">
+    <img src="4.jpg" class="q-img" alt="">
+
+    <p>Czy dzielisz się z nią tym, że wiesz, że to tylko sen?</p>
+
+    <input type="radio" name="q4" id="q4tak">
+    <label for="q4tak" class="ans wrong">TAK</label>
+
+    <input type="radio" name="q4" id="q4nie">
+    <label for="q4nie" class="ans correct">NIE</label>
+  </div>
+
+  <div class="question">
+    <img src="5.jpg" class="q-img" alt="">
+
+    <p>Czy jesteś pewny/a, że nie śpisz? </p>
+
+    <input type="radio" name="q5" id="q5tak">
+    <label for="q5tak" class="ans wrong">TAK</label>
+
+    <input type="radio" name="q5" id="q5nie">
+    <label for="q5nie" class="ans correct">NIE</label>
+  </div>
+</div>
+
+<div class="ending">
+
+  <p class="ending-text">
+    żartuje, nie śpisz.<br>
+    Chyba, że chcesz się upewnić?
+  </p>
+
+  <div class="ending-buttons">
+    <a href="index.html" class="wake-button">
+      obudź się ponownie
+    </a>
+
+    <a href="procedura-wyjscia.html" class="wake-button">
+      wróć do procedury
+    </a>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
