@@ -150,6 +150,13 @@ body {
   margin-top: 15px;
 }
 
+.procedura .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
 
 .test .intro {
   height: 100vh;
@@ -192,9 +199,10 @@ body {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  top: 340px;
+  left: 285px;
+
   cursor: pointer;
   z-index: 2;
 }
@@ -205,14 +213,14 @@ body {
   border-radius: 50%;
   width: 80px;
   height: 50px;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  top: 340px;
+  left: 285px;
+
   opacity: 0;
-  z-index: 1;
 }
 
-#trigger:checked ~ .circle {
+.test #trigger:checked ~ .circle {
   opacity: 1;
 }
 
