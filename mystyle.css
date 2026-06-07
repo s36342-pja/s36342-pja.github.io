@@ -70,13 +70,41 @@ body {
 .glowna .text-block {
   max-width: 600px;
   width: 100%;
-  font-family: "Courier New", monospace;
+  margin: 0 auto;
   line-height: 1.7;
+  font-family: "Courier New", monospace;
+}
+
+.glowna .eyes-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glowna .eyes {
+  display: flex;
+  gap: 20px;
+}
+
+.glowna .eye {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+  transition: 0.3s;
+}
+
+.glowna .eyes:hover .eye {
+  background: red;
+  box-shadow: 0 0 10px red;
 }
 
 .glowna .explain-block {
   width: 66%;
   max-width: 900px;
+  margin: 0 auto;
   border: 1px solid white;
   border-radius: 15px;
   padding: 25px;
