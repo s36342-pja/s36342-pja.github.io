@@ -1,460 +1,24 @@
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-  }
-
-  .intro {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .intro-text {
-    color: rgb(156, 8, 8);
-    font-size: 36px;
-    letter-spacing: 4px;
-    cursor: pointer;
-    transition: color 0.6s ease;
-    text-decoration: none;
-  }
-
-  .intro-text:hover {
-    color: white;
-    letter-spacing: 6px;
-  }
-
-  .content {
-    min-height: 100vh;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .text-block {
-    max-width: 600px;
-    width: 100%;
-    padding: 0;
-    white-space: pre-line;
-    line-height: 1.7;
-    font-family:'Courier New', Courier, monospace
-  }
-
-  .explain-block {
-    width: 66%;
-    max-width: 900px;
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 25px;
-    white-space: pre-line;
-    line-height: 1.7;
-  }
-
-  .eyes-section {
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .eyes {
-    display: flex;
-    gap: 20px;
-  }
-
-  .eye {
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px white;
-  }
-
-  .eyes:hover .eye {
-    background: red;
-    box-shadow: 0 0 10px red;
-  }
-
-  .links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .link-box {
-    border: 3px solid rgb(206, 151, 255);
-    padding: 20px 40px;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-  }
-
-  .link-box:hover {
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-  }
-
-  .explain-image {
-  width: 100%;
-  max-width: 900px;
-  display: block;
-  margin: 20px auto;
-  }
-
-  .character {
-  width: 150px;      
-  display: block;
-  margin: 40px auto;
-  opacity: 0.9;
-  }
-
-  .footer {
-    border-top: 1px solid white;
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    opacity: 0.3;
-    margin-top: 20px;
-  }
-
-@media (max-width: 600px) {
-
-  .intro-text {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .content {
-    padding: 40px 15px;
-  }
-
-  .quiz {
-    width: 90%;
-    margin-top: 150px;
-    gap: 60px;
-  }
-
-  .q-img {
-    width: 140px;
-  }
-
-  .question p {
-    font-size: 18px;
-  }
-
-  .ans {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .ending {
-    margin-top: 200px;
-  }
-
-  .ending-text {
-    font-size: 18px;
-  }
-
-  .wake-button {
-    padding: 15px 25px;
-    font-size: 14px;
-  }
-
-</style>
-
-<style>
-  body {
-     margin: 0;
-     background: black;
-     color: white;
-     font-family: Arial, sans-serif;
-  }
-
-  .warning {
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     padding: 40px;
-     font-family: "Courier New", monospace;
-     font-size: 28px;
-     color: red;
-  }
-
-  .tips {
-     width: 66%;
-     max-width: 900px;
-     margin: 0 auto;
-    padding: 40px 20px;
+html {
+  scroll-behavior: smooth;
 }
 
-  .tips ol {
-     padding-left: 20px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
 }
 
-   .tips li {
-     margin-bottom: 60px;
-     line-height: 1.6;
-}
-
-   .tip-img {
-     width: 100%;
-     max-width: 400px;
-     display: block;
-     margin-top: 15px;
-}
-
-   .links {
-     display: flex;
-     gap: 20px;
-     flex-wrap: wrap;
-     justify-content: center;
-     margin: 60px 0;
-}
-
-   .link-box {
-     border: 3px solid rgb(206, 151, 255);
-     padding: 20px 40px;
-     text-decoration: none;
-     color: white;
-     transition: all 0.3s ease;
-}
-
-   .link-box:hover {
-     background: rgba(255, 255, 255, 0.5);
-     color: black;
-}
-
-   .footer {
-     border-top: 1px solid white;
-     padding: 20px;
-     text-align: center;
-     font-size: 16px;
-     opacity: 0.3;
-     margin-top: 20px;
-}
-
-@media (max-width: 600px) {
-
-  .intro-text {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .content {
-    padding: 40px 15px;
-  }
-
-  .quiz {
-    width: 90%;
-    margin-top: 150px;
-    gap: 60px;
-  }
-
-  .q-img {
-    width: 140px;
-  }
-
-  .question p {
-    font-size: 18px;
-  }
-
-  .ans {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .ending {
-    margin-top: 200px;
-  }
-
-  .ending-text {
-    font-size: 18px;
-  }
-
-  .wake-button {
-    padding: 15px 25px;
-    font-size: 14px;
-  }
-
- .character {
-  width: 150px;
-  display: block;
-  margin: 40px auto;
-}
-
-</style>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-
-  .intro {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .intro-text {
-    color: red;
-    font-size: 60px;
-    font-family: "Courier New", monospace;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
-  }
-
-  .intro-text:hover {
-    color: white;
-    letter-spacing: 6px;
-  }
-
-  .content {
-    min-height: 100vh;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
-  .image-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 40px;
-  }
-
-  #trigger {
-    display: none;
-  }
-
-  .room-img {
-    max-width: 600px;
-    width: 100%;
-    display: block;
-  }
-
-  .click-zone {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .circle {
-    position: absolute;
-    border: 3px solid rgb(49, 233, 49);
-    border-radius: 50%;
-    width: 80px;
-    height: 50px;
-
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 1;
-  }
-
-  #trigger:checked ~ .circle {
-    opacity: 1;
-  }
-
-  .quiz {
-  width: 66%;
-  margin: 100px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-.question {
+.footer {
+  border-top: 1px solid white;
+  padding: 20px;
   text-align: center;
+  font-size: 16px;
+  opacity: 0.3;
+  margin-top: 20px;
 }
 
-.q-img {
-  width: 200px;
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-
-.question p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.question input {
-  display: none;
-}
-
-.ans {
-  display: inline-block;
-  border: 1px solid white;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.ans:hover {
-  background: white;
-  color: black;
-}
-
-input:checked + .correct {
-  background: green;
-  color: black;
-}
-
-input:checked + .wrong {
-  background: red;
-  color: black;
-}
-
-.ending {
-  margin-top: 300px; /* duży scroll */
-  text-align: center;
-}
-
-.ending-text {
-  font-size: 22px;
-  margin-bottom: 40px;
-  opacity: 0.8;
-}
-
-.ending-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.wake-button {
+.link-box, .wake-button {
   border: 3px solid rgb(206, 151, 255);
   padding: 20px 40px;
   text-decoration: none;
@@ -463,55 +27,265 @@ input:checked + .wrong {
   display: inline-block;
 }
 
-.wake-button:hover {
+.link-box:hover, .wake-button:hover {
   background: rgba(255, 255, 255, 0.5);
   color: black;
 }
 
-.footer {
-     border-top: 1px solid white;
-     padding: 20px;
-     text-align: center;
-     font-size: 16px;
-     opacity: 0.3;
-     margin-top: 20px;
+.character {
+  width: 150px;
+  display: block;
+  margin: 40px auto;
+}
+
+
+.glowna .intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glowna .intro-text {
+  color: rgb(156, 8, 8);
+  font-size: 36px;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.glowna .intro-text:hover {
+  color: white;
+  letter-spacing: 6px;
+}
+
+.glowna .content {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.glowna .text-block {
+  max-width: 600px;
+  width: 100%;
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+}
+
+.glowna .explain-block {
+  width: 66%;
+  max-width: 900px;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 25px;
+  line-height: 1.7;
+}
+
+.glowna .explain-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 20px auto;
+}
+
+
+.procedura .warning {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 28px;
+  color: red;
+  padding: 40px;
+}
+
+.procedura .tips {
+  width: 66%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.procedura .tips li {
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.procedura .tip-img {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+}
+
+
+.test .intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test .intro-text {
+  color: red;
+  font-size: 60px;
+  font-family: "Courier New", monospace;
+  text-decoration: none;
+}
+
+.test .intro-text:hover {
+  color: white;
+  letter-spacing: 6px;
+}
+
+.test .content {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.test .image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.test .room-img {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+}
+
+.test .click-zone {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.test .circle {
+  position: absolute;
+  border: 3px solid rgb(49, 233, 49);
+  border-radius: 50%;
+  width: 80px;
+  height: 50px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+}
+
+#trigger:checked ~ .circle {
+  opacity: 1;
+}
+
+.test .quiz {
+  width: 66%;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.test .question {
+  text-align: center;
+}
+
+.test .q-img {
+  width: 200px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.test .question p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.test .question input {
+  display: none;
+}
+
+.test .ans {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.test .ans:hover {
+  background: white;
+  color: black;
+}
+
+.test input:checked + .correct {
+  background: green;
+  color: black;
+}
+
+.test input:checked + .wrong {
+  background: red;
+  color: black;
+}
+
+.test .ending {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.test .ending-text {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.test .ending-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 600px) {
-
   .intro-text {
     font-size: 36px;
     text-align: center;
   }
 
-  .content {
-    padding: 40px 15px;
-  }
-
-  .quiz {
+  .test .quiz {
     width: 90%;
     margin-top: 150px;
     gap: 60px;
   }
 
-  .q-img {
+  .test .q-img {
     width: 140px;
   }
 
-  .question p {
+  .test .question p {
     font-size: 18px;
   }
 
-  .ans {
+  .test .ans {
     padding: 8px 16px;
     font-size: 14px;
   }
 
-  .ending {
+  .test .ending {
     margin-top: 200px;
   }
 
-  .ending-text {
+  .test .ending-text {
     font-size: 18px;
   }
 
@@ -521,11 +295,6 @@ input:checked + .wrong {
   }
 
   .character {
-  width: 150px;
-  display: block;
-  margin: 40px auto;
-}  
-
+    width: 100px;
+  }
 }
-
-</style>
