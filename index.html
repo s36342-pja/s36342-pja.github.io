@@ -2,7 +2,6 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NieMówŻeWiesz</title>
 
 <style>
@@ -17,6 +16,7 @@
     color: white;
   }
 
+  /* SEKCJA STARTOWA */
   .intro {
     height: 100vh;
     display: flex;
@@ -38,6 +38,7 @@
     letter-spacing: 6px;
   }
 
+  /* CONTENT */
   .content {
     min-height: 100vh;
     padding: 80px 20px;
@@ -47,6 +48,7 @@
     gap: 60px;
   }
 
+  /* TEKST SENNY (bez ramki) */
   .text-block {
     max-width: 600px;
     width: 100%;
@@ -56,6 +58,7 @@
     font-family:'Courier New', Courier, monospace
   }
 
+  /* WYJAŚNIENIE */
   .explain-block {
     width: 66%;
     max-width: 900px;
@@ -66,13 +69,15 @@
     line-height: 1.7;
   }
 
+  /* SEKCJA OCZU */
   .eyes-section {
-    height: 100vh; 
+    height: 100vh; /* pełny ekran */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  /* OCZY */
   .eyes {
     display: flex;
     gap: 20px;
@@ -92,6 +97,7 @@
     box-shadow: 0 0 10px red;
   }
 
+  /* LINKI */
   .links {
     display: flex;
     gap: 20px;
@@ -112,12 +118,7 @@
     color: black;
   }
 
-  .explain-image {
-  width: 100%;
-  max-width: 900px;
-  display: block;
-  margin: 20px auto;
-  }
+  /* FOOTER */
   .footer {
     border-top: 1px solid white;
     padding: 20px;
@@ -127,60 +128,19 @@
     margin-top: 20px;
   }
 
-@media (max-width: 600px) {
-
-  .intro-text {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .content {
-    padding: 40px 15px;
-  }
-
-  .quiz {
-    width: 90%;
-    margin-top: 150px;
-    gap: 60px;
-  }
-
-  .q-img {
-    width: 140px;
-  }
-
-  .question p {
-    font-size: 18px;
-  }
-
-  .ans {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .ending {
-    margin-top: 200px;
-  }
-
-  .ending-text {
-    font-size: 18px;
-  }
-
-  .wake-button {
-    padding: 15px 25px;
-    font-size: 14px;
-  }
-
 </style>
 </head>
 
 <body>
 
+<!-- EKRAN STARTOWY -->
 <div class="intro">
   <a href="#dalej" class="intro-text">obudź się ponownie</a>
 </div>
 
 <div id="dalej" class="content">
 
+  <!-- CZĘŚĆ 1: SEN -->
   <div class="text-block">
     <p>
 8, 9, 10, 11 raz…chwila, czy znowu mnie cofnie, czy może już jestem dalej.
@@ -207,28 +167,25 @@ Mogę się ruszyć? Nie? Super, dziękuję.
   </div>
 </div>
 
+  <!-- CZĘŚĆ 2: WYJAŚNIENIE -->
   <div class="explain-block">
     <p>
 Najprościej: Twój mózg już się obudził, ale ciało jeszcze nie.
 Czyli, w jaki sposób działa paraliż senny.
-Normalnie, kiedy śpisz (zwłaszcza w fazie REM), Twoje ciało jest praktycznie sparaliżowane. To się nazywa atonia. I wbrew temu, co się wydaje, to jest bardzo potrzebne, dzięki temu nie wykonujesz ruchów ze snu i nie robisz sobie krzywdy.
+Normalnie, kiedy śpisz (zwłaszcza w fazie REM), Twoje ciało jest praktycznie sparaliżowane. To się nazywa atonia. I wbrew temu, co się wydaje, to jest bardzo potrzebne — dzięki temu nie wykonujesz ruchów ze snu i nie robisz sobie krzywdy.
 Problem zaczyna się wtedy, kiedy coś się rozjedzie.
 Budzi się głowa… ale ciało nadal jest „wyłączone”.
-Jesteś świadomy, wiesz gdzie jesteś, próbujesz się ruszyć i nic. Jakby ktoś odciął połączenie. To właśnie moment, w którym mózg nie przechodzi płynnie ze snu do pełnego czuwania.
+Jesteś świadomy, wiesz gdzie jesteś, próbujesz się ruszyć — i nic. Jakby ktoś odciął połączenie. To właśnie moment, w którym mózg nie przechodzi płynnie ze snu do pełnego czuwania.
 I to nie dzieje się bez powodu.
-Różne rzeczy mogą to wywoływać:problemy ze snem (np. niespokojne nogi), niektóre zaburzenia psychiczne albo nawet leki, szczególnie te na lęk.
+Różne rzeczy mogą to wywoływać — problemy ze snem (np. niespokojne nogi), niektóre zaburzenia psychiczne albo nawet leki, szczególnie te na lęk.
 Ale mimo wszystko twoja głowa, podświadomość, wyobraźnia, kto w co wierzy, postanawia pisać ci dziwne scenariusze, w których jesteś zmuszony grać.
     </p>
   </div>
 
-<img 
-   src="https://upload.wikimedia.org/wikipedia/commons/5/56/John_Henry_Fuseli_-_The_Nightmare.JPG" 
-   class="explain-image"
-   alt="The Nightmare Fuseli">
-
+  <!-- RESZTA -->
   <div class="links">
-    <a href="procedura-wyjscia.html" class="link-box">procedura wyjścia</a>
-    <a href="gdy-wiesz.html" class="link-box">gdy wiesz</a>
+    <a href="procedura-wyjscia.html" class="link-box">rady</a>
+    <a href="gdy-wiesz.html" class="link-box">test</a>
   </div>
 
   <div class="footer">
